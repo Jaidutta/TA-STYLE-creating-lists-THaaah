@@ -1,0 +1,545 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom Style */
+*,
+*::before,
+*::after {
+  box-sizing: border;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #4b4b4bb4;
+}
+
+.container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #555555;
+  font-weight: 800;
+  margin-top: 24px;
+  padding: 12px 24px;
+}
+
+.padding {
+  padding: 80px 0;
+}
+/* Header */
+.header {
+  background-color: #323347;
+  padding: 24px 0;
+}
+
+.brand-logo {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.header-nav li {
+  margin-left: 30px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.header-nav a i {
+  margin-right: 8px;
+}
+
+.drop-down-menu {
+  position: relative;
+}
+
+.sub-menu {
+  background-color: #fff;
+  position: absolute;
+  width: 170px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.sub-menu::before {
+  content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid;
+    /* border-color: transparent transparent #fff transparent; */
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: transparent;
+}
+
+.drop-down-menu:hover .sub-menu {
+  display: block;
+}
+.sub-menu li {
+  margin-left: 0;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgb(206, 201, 201);  
+}
+.sub-menu li a {
+  color: #909090;
+  text-transform: capitalize;
+}
+/* Hero */
+.hero {
+  height: calc(100vh - 78px);
+  background: linear-gradient(
+      to top,
+      rgba(50, 51, 71, 0.952),
+      rgba(50, 51, 71, 0.952)
+    ),
+    url("../images/kisspng-energy-desktop-wallpaper-multiple-picks-geometric-triangle-color-pattern-5aaec3d5d84236.3601443115214028378858.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  text-align: center;
+}
+
+.hero.flex {
+  justify-content: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  color: #e96c77;
+  font-size: 24px;
+}
+
+.btn.hero-btn {
+  color: #fff;
+  background-color: #e96c77;
+  border-color: #e96c77;
+}
+
+/* Card Section */
+.card-section {
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.left-aligned-lines,
+.right-aligned-lines {
+  width: 120px;
+  height: 20px;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-self: flex-start; */
+}
+
+.top,
+.middle,
+.bottom {
+  background-color: #dddddd;
+  height: 2px;
+}
+
+.left-middle {
+  width: 80%;
+  align-self: flex-end;
+}
+.left-bottom {
+  width: 60%;
+  align-self: flex-end;
+}
+
+.right-middle {
+  width: 80%;
+  align-self: flex-start;
+}
+
+.right-bottom {
+  width: 60%;
+  align-self: flex-start;
+}
+
+.card-section-header {
+  display: inline-block;
+  /* border: 1px solid brown; */
+  margin-bottom: 20px;
+}
+
+.card-section-header .line-container {
+  display: flex;
+  align-items: center;
+}
+
+.card-section-header h3 {
+  font-size: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+  /* border: 1px solid blue; */
+  align-self: flex-end;
+  font-weight: 900;
+  color: black;
+}
+
+/* card */
+
+.three-card-container {
+  padding: 0 80px;
+  margin-top: 60px;
+}
+.card-1-3 {
+  flex: 0 1 30%;
+  background-color: #fff;
+  padding: 30px 8px;
+  box-shadow: 0 3px 3px rgba(59, 59, 59, 0.363);
+}
+
+.card-1-3 p {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.card-1-3 i {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #d1616b 50%, #e96c77 50%);
+  line-height: 50px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.card-1-3 h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+/* Red Section */
+.red-section {
+  background-color: #e96c77;
+  color: #fff;
+}
+
+h3.red-section-header {
+  color: #fff;
+}
+
+.two-card-container {
+  margin-top: 50px;
+  flex-wrap: wrap;
+  padding-left: 220px;
+  padding-right: 220px;
+}
+
+.card-1-2 {
+  padding: 35px 12px;
+  flex: 0 1 46%;
+  margin-bottom: 20px;
+  background-color: #ec828c;
+  box-shadow: 0 3px 3px rgba(59, 59, 59, 0.363);
+}
+
+.card-1-2 i {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #525360 50%, #5b5c6b 50%);
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+
+.card-1-2 h4,
+.photo-1-3 h4 {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card-1-2 p {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Photo Section */
+.photo-section {
+  background-color: #fff;
+}
+.photo-section-header {
+  color: black;
+}
+
+.photo-card-container {
+  padding: 30px 60px 20px 60px;
+}
+.photo-1-3 {
+  flex: 0 1 31.33%;
+}
+
+.photo-1-3 p {
+  font-size: 14px;
+}
+.img-container img {
+  width: 100%;
+}
+
+.photo-1-3 h4 {
+  margin-top: 20px;
+  color: rgba(22, 22, 22, 0.699);
+}
+
+.btn {
+  text-decoration: none;
+  border: 3px solid #ddd;
+  padding: 12px 24px;
+  text-transform: uppercase;
+}
+
+/* Contact Section */
+h3.contact-section-header {
+  color: #555;
+}
+
+div.form {
+  display: inline-block;
+  width: 65%;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .3);
+}
+
+div.form .flex {
+  padding: 10px;
+  width: 100%;
+}
+form {
+  display: block;
+  width: 55%;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1.4px solid #b3afaf;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  border: 1.4px solid #b3afaf;
+}
+
+.btn.send {
+  background-color: #e96c77;
+  border-color: #e96c77;
+  margin-right: 10px;
+}
+.contacts {
+  align-self: flex-start;
+  width: 40%;
+}
+
+.contact {
+  border-bottom: 1px solid gray;
+  display: flex;
+  padding: 20px 5px;
+}
+
+.contact i {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  background-color: #808080;
+  color: white;
+  margin-right: 10px;
+}
+.contact i.fa-twitter {
+  background-color: #4EAFDB;
+}
+
+.contact i.fa-facebook-f {
+  background-color: #456BC9;  
+}
+
+.contact .fa-linkedin-in {
+  background-color: #3492D9;
+}
+.location-txt {
+  text-align: justify;
+}
+
+.footer {
+  text-align: center;
+  padding: 32px;
+  background-color: #ECECEC;
+}
+
+.footer p {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
